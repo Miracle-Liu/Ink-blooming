@@ -1,0 +1,80 @@
+
+/* mask animation */
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: radial-gradient(circle at 50% 50%, white,white);
+}
+
+.maskfade(@name,@positonX:50%,@positonY:50%,@time:2s) {
+  @keyframes @name {
+    0% {
+      background: radial-gradient(circle at @positonX @positonY, white, white);
+    }
+    5% {
+      background: radial-gradient(circle at @positonX @positonY , rgba(250, 250, 250, 0) 5%,white 25%);
+    }
+    10% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 10%,white 30%);
+    }
+    15% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 15%, white 35%);
+    }
+    20% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 20%,white 40%);
+    }
+    25% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 25%,white 45%);
+    }
+    30% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 30%,white 50%);
+    }
+    35% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 35%,white 55%);
+    }
+    40% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 40%,white 60%);
+    }
+    45% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 45%,white 65%);
+    }
+    50% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 50%, white 70%);
+    }
+    55% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 55%,white 75%);
+    }
+    60% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 60%,white 80%);
+    }
+    65% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 65%,white 85%);
+    }
+    70% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 70%,white 90%);
+    }
+    75% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 75%,white 95%);
+    }
+    80% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0) 80%,white 100%);
+    }
+    90% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0),rgba(250, 250, 250, 0));
+    }
+    100% {
+      background: radial-gradient(circle at @positonX @positonY, rgba(250, 250, 250, 0), rgba(250, 250, 250, 0));
+    }
+  }
+  animation-name: @name;
+  animation-duration: @time;
+  animation-fill-mode: both;
+}
+
+.maskfadeIn{
+.maskfade(maskfade);
+}
